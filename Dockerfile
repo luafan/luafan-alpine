@@ -13,6 +13,7 @@ RUN apk add --update bsd-compat-headers tzdata linux-headers git lua5.3-dev lua5
     && luarocks install compat53 && luarocks install lpeg && luarocks install lua-cjson 2.1.0-1 && luarocks install luafilesystem \
     && luarocks install lzlib ZLIB_LIBDIR=/lib && luarocks install luasocket && luarocks install openssl && luarocks install lbase64 && luarocks install lmd5 \
     && luarocks install lua-protobuf \
+    && luarocks install lua-iconv \
     && apk del linux-headers git lua5.3-dev g++ bison ncurses-dev libc-dev curl-dev wget libevent-dev cmake make gcc unzip openssl-dev bsd-compat-headers \
     && rm -rf /usr/local/mysql/lib/*.a /var/cache/apk/*
 
